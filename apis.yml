@@ -1,23 +1,68 @@
 aid: anipen
+
 name: Anipen
-description: 'Anipen is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.anipen.com/wp-content/themes/anipen/assets/images/anipen_preview.jpg
+
+description: 'Anipen (애니펜) is a South Korean technology company focused on immersive XR, AR, and AI-driven content platforms. It develops metaverse infrastructure, AR kiosks, AI-powered avatar engines, and digital twin solutions for various industries. Since 2013, Anipen has delivered over 19 million global app downloads, 7.5 million AR video views, and operates services such as AR live streaming, XR commerce, and AI character platforms, positioning itself as a key player in the Korean and global metaverse ecosystem.'
+
 url: https://raw.githubusercontent.com/api-evangelist/anipen/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+- XR
+- AR
+- AI
+- Metaverse
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/anipen-hosts.yml
+- type: TermsOfService
+  url: https://www.anipen.com/termsofservice/
+- type: PrivacyPolicy
+  url: https://www.anipen.com/privacy/
+- type: Newsroom
+  url: https://www.anipen.com/news/
+- type: Blog
+  url: https://www.anipen.com/news/blog/
+- type: DomainSecurity
+  url: security/anipen-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/anipen
+  url: https://www.anipen.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-25'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
